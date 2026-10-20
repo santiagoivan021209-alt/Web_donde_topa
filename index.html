@@ -1,0 +1,319 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Donde Topa Stock</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: cabecera de horno con 3 números clave, pestañas tipo comanda, filas tipo planilla de cocina */
+:root{
+  --bg:#f3ebdd; --surface:#fbf6ec; --line:#e2d4bc; --fg:#2e1d12; --muted:#7a6551;
+  --brown:#4a2c1a; --gold:#c08a2c; --gold-soft:#f0dfb8;
+  --ok:#3f7a3a; --warn:#b5701a; --bad:#b23a2a;
+  --display:"Bricolage Grotesque",Georgia,serif; --body:"Figtree",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1c140e; --surface:#261b13; --line:#3d2d20; --fg:#f2e6d3; --muted:#b29c84;
+  --brown:#f2e6d3; --gold:#e0aa4a; --gold-soft:#3b2a14;
+  --ok:#7fbf72; --warn:#e3a14a; --bad:#ec7a66; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#1c140e; --surface:#261b13; --line:#3d2d20; --fg:#f2e6d3; --muted:#b29c84;
+  --brown:#f2e6d3; --gold:#e0aa4a; --gold-soft:#3b2a14;
+  --ok:#7fbf72; --warn:#e3a14a; --bad:#ec7a66; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--body)}
+.wrap{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px;display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px}
+h1{font:800 clamp(26px,6vw,36px)/1.05 var(--display);margin:0;color:var(--brown);letter-spacing:-.01em}
+h1 span{color:var(--gold)}
+.sub{color:var(--muted);font-size:13px}
+h2{font:600 20px/1.2 var(--display);margin:0;color:var(--brown);text-wrap:balance}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.kpi{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi b{font:800 34px/1 var(--display);font-variant-numeric:tabular-nums;color:var(--brown)}
+.kpi.main b{color:var(--gold)}
+.kpi small{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+@media (max-width:520px){.kpis{grid-template-columns:1fr}.kpi{flex-direction:row;align-items:baseline;justify-content:space-between}.kpi b{font-size:28px}}
+nav{display:flex;gap:6px;flex-wrap:wrap;border-bottom:2px solid var(--line)}
+nav button{font:600 14px var(--body);background:none;border:0;color:var(--muted);padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+nav button[aria-selected="true"]{color:var(--brown);border-color:var(--gold)}
+nav button:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+section{display:flex;flex-direction:column;gap:14px}
+.row-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
+.btn{font:600 14px var(--body);border-radius:999px;padding:9px 16px;cursor:pointer;border:1.5px solid var(--brown);background:var(--brown);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--brown)}
+.btn.sm{padding:5px 11px;font-size:13px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:560px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);text-align:left;font-weight:600;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.pill.ok{color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,transparent)}
+.pill.warn{color:var(--warn);background:color-mix(in srgb,var(--warn) 16%,transparent)}
+.pill.bad{color:var(--bad);background:color-mix(in srgb,var(--bad) 14%,transparent)}
+.tag{font-size:11px;color:var(--muted);border:1px dashed var(--line);border-radius:6px;padding:0 5px;margin-left:6px}
+.actions{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;align-items:end}
+label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--muted);font-weight:600}
+input,select{font:500 15px var(--body);color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%;min-width:0}
+.note{font-size:13px;color:var(--muted);max-width:65ch}
+.msg{font-size:13px;font-weight:600}
+.msg.err{color:var(--bad)} .msg.okm{color:var(--ok)}
+.empty{padding:24px;text-align:center;color:var(--muted)}
+.list{display:flex;flex-direction:column}
+.mov{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+.mov:last-child{border-bottom:0}
+.mov .q{font:800 18px var(--display)}
+.mov .q.in{color:var(--ok)} .mov .q.out{color:var(--gold)}
+.mov .d{font-size:12px;color:var(--muted)}
+.vitrina{background:var(--brown);color:var(--bg);border-radius:18px;padding:28px 22px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.vitrina .big{font:800 clamp(56px,16vw,96px)/.9 var(--display);color:var(--gold);font-variant-numeric:tabular-nums}
+.vitrina h3{font:600 22px var(--display);margin:0}
+.vitrina p{margin:0;opacity:.85}
+:root[data-theme="dark"] .vitrina,:root:not([data-theme="light"]) .vitrina{}
+.code{font:13px/1.45 ui-monospace,Menlo,monospace;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;overflow-x:auto;white-space:pre}
+.banner{background:var(--gold-soft);color:var(--fg);border-radius:10px;padding:10px 14px;font-size:13px}
+@media (prefers-reduced-motion:no-preference){.btn{transition:transform .1s}.btn:active{transform:scale(.97)}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Donde Topa <span>·</span> Stock</h1>
+    <div class="sub" id="sync">Conectando…</div>
+  </header>
+
+  <div class="kpis" aria-label="Resumen">
+    <div class="kpi main"><small>Docenas disponibles</small><b id="k-disp">–</b></div>
+    <div class="kpi"><small>Tandas que alcanzan</small><b id="k-tandas">–</b></div>
+    <div class="kpi"><small>Insumos para comprar</small><b id="k-comprar">–</b></div>
+  </div>
+
+  <div class="banner" id="offline" hidden>Esta vista no puede guardar datos (abrila con tu cuenta de claude.ai). Lo que ves no se está sincronizando.</div>
+
+  <nav role="tablist">
+    <button role="tab" data-tab="insumos" aria-selected="true">Materia prima</button>
+    <button role="tab" data-tab="docenas" aria-selected="false">Docenas</button>
+    <button role="tab" data-tab="vitrina" aria-selected="false">Vitrina web</button>
+  </nav>
+
+  <!-- MATERIA PRIMA -->
+  <section id="tab-insumos">
+    <div class="row-head">
+      <h2>¿Qué tenemos comprado?</h2>
+      <div class="actions">
+        <button class="btn ghost" id="btn-nuevo">+ Nuevo insumo</button>
+        <button class="btn" id="btn-tanda">Hacer una tanda</button>
+      </div>
+    </div>
+    <p class="note">Cada insumo dice cuánto hay y cuánto se usa en <b>una tanda</b>. Si alcanza para 1 o más tandas, no hace falta comprarlo. “Hacer una tanda” descuenta los insumos y suma las docenas al stock.</p>
+    <div class="msg" id="msg-ins"></div>
+
+    <div class="card" id="form-ins" hidden>
+      <h2 id="form-ins-title">Nuevo insumo</h2>
+      <div class="form">
+        <label>Nombre<input id="f-nombre" placeholder="Harina 000"></label>
+        <label>Unidad<select id="f-unidad"><option>kg</option><option>g</option><option>u</option><option>l</option><option>paq</option><option>docena</option></select></label>
+        <label>Hay en stock<input id="f-cant" type="number" min="0" step="any" inputmode="decimal"></label>
+        <label>Se usa por tanda<input id="f-uso" type="number" min="0" step="any" inputmode="decimal"></label>
+      </div>
+      <div class="actions"><button class="btn ghost" id="f-cancel">Cancelar</button><button class="btn" id="f-save">Guardar</button></div>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Insumo</th><th class="num">Hay</th><th class="num">Por tanda</th><th class="num">Alcanza</th><th>Estado</th><th></th></tr></thead>
+        <tbody id="ins-body"><tr><td colspan="6" class="empty">Cargando insumos…</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Lista de compras</h2>
+      <div id="compras" class="note">—</div>
+    </div>
+  </section>
+
+  <!-- DOCENAS -->
+  <section id="tab-docenas" hidden>
+    <div class="row-head"><h2>Control de docenas</h2></div>
+    <div class="card">
+      <div class="form">
+        <label>Movimiento<select id="m-tipo"><option value="venta">Venta</option><option value="produccion">Producción (sin descontar insumos)</option><option value="ajuste">Ajuste (pérdida / se rompieron)</option></select></label>
+        <label>Docenas<input id="m-doc" type="number" min="0.5" step="0.5" value="1" inputmode="decimal"></label>
+        <label>Detalle<input id="m-nota" placeholder="Cliente, curso, etc."></label>
+        <button class="btn" id="m-save">Registrar</button>
+      </div>
+      <div class="msg" id="msg-mov"></div>
+    </div>
+    <div class="kpis" style="grid-template-columns:repeat(3,1fr)">
+      <div class="kpi"><small>Producidas</small><b id="t-prod">–</b></div>
+      <div class="kpi"><small>Vendidas</small><b id="t-vend">–</b></div>
+      <div class="kpi main"><small>Disponibles</small><b id="t-disp">–</b></div>
+    </div>
+    <h2>Historial</h2>
+    <div class="tablewrap"><div class="list" id="mov-list"><div class="empty">Todavía no hay movimientos. Registrá la primera tanda o venta arriba.</div></div></div>
+  </section>
+
+  <!-- VITRINA -->
+  <section id="tab-vitrina" hidden>
+    <div class="vitrina">
+      <p>Empanadas caseras</p>
+      <div class="big" id="v-num">–</div>
+      <h3 id="v-txt">docenas disponibles</h3>
+      <p id="v-upd"></p>
+    </div>
+    <div class="card">
+      <h2>Mensaje para clientes</h2>
+      <div class="form">
+        <label style="grid-column:1/-1">Texto que acompaña el número<input id="v-msg" placeholder="Pedidos por WhatsApp"></label>
+      </div>
+      <div class="actions"><button class="btn" id="v-save">Guardar mensaje</button></div>
+      <div class="msg" id="msg-v"></div>
+    </div>
+    <div class="card">
+      <h2>Copiar para Instagram / WhatsApp</h2>
+      <div class="code" id="v-copytxt"></div>
+      <div class="actions"><button class="btn ghost" id="v-copy">Copiar texto</button></div>
+    </div>
+  </section>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const fmt=n=>{const r=Math.round(n*100)/100;return Number.isInteger(r)?String(r):r.toLocaleString('es-AR')};
+let db=null, insumos=[], movs=[], vitrina={mensaje:""}, editId=null, busy=false;
+
+/* pestañas */
+const tabs=["insumos","docenas","vitrina"];
+function show(t){if(!tabs.includes(t))t="insumos";
+  document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-selected",b.dataset.tab===t));
+  tabs.forEach(x=>$("#tab-"+x).hidden=x!==t);}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>show(b.dataset.tab));
+show((location.hash||"").slice(1));
+
+/* cálculos */
+function stock(){let p=0,v=0,a=0;for(const m of movs){const d=Number(m.docenas)||0;
+  if(m.tipo==="produccion")p+=d;else if(m.tipo==="venta")v+=d;else if(m.tipo==="ajuste")a+=d;}
+  return{p,v,a,disp:p-v-a};}
+function tandasDe(i){const u=Number(i.usoPorTanda)||0;return u>0?Math.floor((Number(i.cantidad)||0)/u+1e-9):Infinity;}
+
+function render(){
+  const s=stock();
+  const usados=insumos.filter(i=>Number(i.usoPorTanda)>0);
+  const minT=usados.length?Math.min(...usados.map(tandasDe)):0;
+  const faltan=usados.filter(i=>tandasDe(i)<1);
+  $("#k-disp").textContent=fmt(s.disp);
+  $("#k-tandas").textContent=usados.length?fmt(minT):"–";
+  $("#k-comprar").textContent=fmt(faltan.length);
+  $("#t-prod").textContent=fmt(s.p);$("#t-vend").textContent=fmt(s.v);$("#t-disp").textContent=fmt(s.disp);
+  $("#btn-tanda").disabled=!db||!usados.length||minT<1;
+
+  const tb=$("#ins-body");tb.innerHTML="";
+  if(!insumos.length){tb.innerHTML='<tr><td colspan="6" class="empty">No hay insumos cargados. Tocá “+ Nuevo insumo” para agregar el primero.</td></tr>';}
+  for(const i of [...insumos].sort((a,b)=>tandasDe(a)-tandasDe(b))){
+    const t=tandasDe(i), tr=document.createElement("tr");
+    const st=t===Infinity?['ok','No se usa']:t<1?['bad','Comprar']:t<2?['warn','Alcanza justo']:['ok','Alcanza'];
+    tr.innerHTML=`<td></td><td class="num">${fmt(Number(i.cantidad)||0)} ${i.unidad||""}</td><td class="num">${fmt(Number(i.usoPorTanda)||0)} ${i.unidad||""}</td><td class="num">${t===Infinity?"—":fmt(t)+" tanda"+(t===1?"":"s")}</td><td><span class="pill ${st[0]}">${st[1]}</span></td><td><div class="actions"><button class="btn ghost sm" data-buy>+ Compra</button><button class="btn ghost sm" data-edit>Editar</button><button class="btn ghost sm" data-del>Borrar</button></div></td>`;
+    tr.children[0].textContent=i.nombre||"(sin nombre)";
+    if(i.ejemplo){const g=document.createElement("span");g.className="tag";g.textContent="ejemplo";tr.children[0].append(g);}
+    tr.querySelector("[data-buy]").onclick=()=>compra(i);
+    tr.querySelector("[data-edit]").onclick=()=>abrirForm(i);
+    tr.querySelector("[data-del]").onclick=()=>borrar(i,tr);
+    tb.append(tr);
+  }
+  const c=$("#compras");
+  if(!usados.length)c.textContent="Cargá los insumos para armar la lista.";
+  else if(!faltan.length&&minT<2){c.innerHTML="";const w=usados.filter(i=>tandasDe(i)<2);c.textContent="Para la próxima tanda alcanza todo. Después de esa faltaría: "+w.map(i=>i.nombre).join(", ")+".";}
+  else if(!faltan.length)c.textContent="No hace falta comprar nada: alcanza para "+fmt(minT)+" tandas.";
+  else{c.innerHTML="";const ul=document.createElement("ul");ul.style.margin="0";
+    for(const i of faltan){const li=document.createElement("li");const need=(Number(i.usoPorTanda)||0)-(Number(i.cantidad)||0);
+      li.textContent=`${i.nombre}: comprar al menos ${fmt(need)} ${i.unidad||""} para una tanda`;ul.append(li);}c.append(ul);}
+
+  const ml=$("#mov-list");
+  if(movs.length){ml.innerHTML="";
+    for(const m of [...movs].sort((a,b)=>(b.fecha||"").localeCompare(a.fecha||"")).slice(0,60)){
+      const el=document.createElement("div");el.className="mov";const out=m.tipo!=="produccion";
+      el.innerHTML=`<span class="q ${out?"out":"in"}">${out?"−":"+"}${fmt(Number(m.docenas)||0)}</span><div style="min-width:0"><div></div><div class="d"></div></div><button class="btn ghost sm">Borrar</button>`;
+      el.children[1].children[0].textContent=({produccion:"Producción",venta:"Venta",ajuste:"Ajuste"})[m.tipo]+(m.nota?" · "+m.nota:"");
+      el.children[1].children[1].textContent=m.fecha?new Date(m.fecha).toLocaleString("es-AR",{dateStyle:"medium",timeStyle:"short"}):"";
+      el.querySelector("button").onclick=async()=>{if(!db)return;const b=el.querySelector("button");if(b.dataset.c!=="1"){b.dataset.c="1";b.textContent="¿Seguro?";return;}
+        try{await db.collection("movimientos").doc(m.id).delete();}catch(e){$("#msg-mov").className="msg err";$("#msg-mov").textContent="No se pudo borrar: "+(e.message||e.code);}};
+      ml.append(el);}
+  } else ml.innerHTML='<div class="empty">Todavía no hay movimientos. Registrá la primera tanda o venta arriba.</div>';
+
+  const d=Math.max(0,s.disp);
+  $("#v-num").textContent=fmt(d);
+  $("#v-txt").textContent=d===1?"docena disponible":d===0?"¡Agotadas por hoy!":"docenas disponibles";
+  $("#v-upd").textContent=vitrina.mensaje||"";
+  if(document.activeElement!==$("#v-msg"))$("#v-msg").value=vitrina.mensaje||"";
+  $("#v-copytxt").textContent=`🥟 Donde Topa\n${d>0?`Hoy tenemos ${fmt(d)} docena${d===1?"":"s"} de empanadas caseras disponibles.`:"Hoy nos quedamos sin empanadas. ¡Gracias!"}${vitrina.mensaje?"\n"+vitrina.mensaje:""}`;
+}
+
+/* acciones insumos */
+function abrirForm(i){editId=i?i.id:null;$("#form-ins").hidden=false;$("#form-ins-title").textContent=i?"Editar insumo":"Nuevo insumo";
+  $("#f-nombre").value=i?.nombre||"";$("#f-unidad").value=i?.unidad||"kg";$("#f-cant").value=i?.cantidad??"";$("#f-uso").value=i?.usoPorTanda??"";$("#f-nombre").focus();}
+$("#btn-nuevo").onclick=()=>abrirForm(null);
+$("#f-cancel").onclick=()=>{$("#form-ins").hidden=true;};
+$("#f-save").onclick=async()=>{const m=$("#msg-ins");
+  const nombre=$("#f-nombre").value.trim(),cant=parseFloat($("#f-cant").value),uso=parseFloat($("#f-uso").value);
+  if(!nombre){m.className="msg err";m.textContent="Poné el nombre del insumo.";return;}
+  if(!(cant>=0)||!(uso>=0)){m.className="msg err";m.textContent="Completá cuánto hay y cuánto se usa por tanda (pueden ser 0).";return;}
+  if(!db){m.className="msg err";m.textContent="No hay conexión para guardar.";return;}
+  try{const data={nombre,unidad:$("#f-unidad").value,cantidad:cant,usoPorTanda:uso,ejemplo:false};
+    if(editId)await db.collection("insumos").doc(editId).set(data);else await db.collection("insumos").add(data);
+    $("#form-ins").hidden=true;m.className="msg okm";m.textContent="Guardado: "+nombre;}catch(e){m.className="msg err";m.textContent="No se pudo guardar: "+(e.message||e.code);}};
+async function compra(i){const tr=[...document.querySelectorAll("#ins-body tr")].find(r=>r.children[0].textContent.startsWith(i.nombre));
+  const cell=tr.querySelector(".actions");cell.innerHTML="";const inp=document.createElement("input");inp.type="number";inp.min="0";inp.step="any";inp.placeholder="cuánto ("+(i.unidad||"")+")";inp.style.width="110px";
+  const ok=document.createElement("button");ok.className="btn sm";ok.textContent="Sumar";cell.append(inp,ok);inp.focus();
+  ok.onclick=async()=>{const q=parseFloat(inp.value);if(!(q>0)||!db)return;ok.disabled=true;
+    try{await db.collection("insumos").doc(i.id).update({cantidad:(Number(i.cantidad)||0)+q,ejemplo:false});
+      $("#msg-ins").className="msg okm";$("#msg-ins").textContent=`Sumaste ${fmt(q)} ${i.unidad||""} de ${i.nombre}.`;}
+    catch(e){$("#msg-ins").className="msg err";$("#msg-ins").textContent="No se pudo guardar: "+(e.message||e.code);render();}};}
+async function borrar(i,tr){const b=tr.querySelector("[data-del]");if(b.dataset.c!=="1"){b.dataset.c="1";b.textContent="¿Seguro?";return;}
+  try{await db.collection("insumos").doc(i.id).delete();}catch(e){$("#msg-ins").className="msg err";$("#msg-ins").textContent="No se pudo borrar.";}}
+
+$("#btn-tanda").onclick=async()=>{const b=$("#btn-tanda"),m=$("#msg-ins");
+  if(busy||!db)return;
+  if(b.dataset.c!=="1"){b.dataset.c="1";b.textContent="Confirmar tanda";
+    const box=document.getElementById("tanda-doc")||Object.assign(document.createElement("label"),{id:"tanda-doc"});
+    box.innerHTML='Docenas que salen de esta tanda<input id="tanda-n" type="number" min="0.5" step="0.5" inputmode="decimal">';
+    box.style.maxWidth="240px";b.parentElement.before(box);
+    $("#tanda-n").value=localStorageGet("docPorTanda")||"10";return;}
+  const n=parseFloat($("#tanda-n").value);if(!(n>0)){m.className="msg err";m.textContent="Indicá cuántas docenas salieron.";return;}
+  busy=true;b.disabled=true;
+  try{for(const i of insumos){const u=Number(i.usoPorTanda)||0;if(u>0)await db.collection("insumos").doc(i.id).update({cantidad:Math.max(0,Math.round(((Number(i.cantidad)||0)-u)*1000)/1000)});}
+    await db.collection("movimientos").add({tipo:"produccion",docenas:n,nota:"Tanda",fecha:new Date().toISOString()});
+    localStorageSet("docPorTanda",String(n));
+    m.className="msg okm";m.textContent=`Listo: +${fmt(n)} docenas y se descontaron los insumos.`;}
+  catch(e){m.className="msg err";m.textContent="La tanda quedó a medias, revisá los números: "+(e.message||e.code);}
+  busy=false;b.dataset.c="";b.textContent="Hacer una tanda";document.getElementById("tanda-doc")?.remove();render();};
+function localStorageGet(k){try{return localStorage.getItem(k)}catch{return null}}
+function localStorageSet(k,v){try{localStorage.setItem(k,v)}catch{}}
+
+/* movimientos */
+$("#m-save").onclick=async()=>{const m=$("#msg-mov"),tipo=$("#m-tipo").value,n=parseFloat($("#m-doc").value);
+  if(!(n>0)){m.className="msg err";m.textContent="Poné cuántas docenas.";return;}
+  if(tipo!=="produccion"&&n>stock().disp){m.className="msg err";m.textContent=`Solo hay ${fmt(stock().disp)} docenas disponibles.`;return;}
+  if(!db){m.className="msg err";m.textContent="No hay conexión para guardar.";return;}
+  try{await db.collection("movimientos").add({tipo,docenas:n,nota:$("#m-nota").value.trim(),fecha:new Date().toISOString()});
+    $("#m-nota").value="";m.className="msg okm";m.textContent="Registrado.";}catch(e){m.className="msg err";m.textContent="No se pudo registrar: "+(e.message||e.code);}};
+
+/* vitrina */
+$("#v-save").onclick=async()=>{if(!db)return;try{await db.doc("config/vitrina").set({mensaje:$("#v-msg").value.trim()});$("#msg-v").className="msg okm";$("#msg-v").textContent="Mensaje guardado.";}catch(e){$("#msg-v").className="msg err";$("#msg-v").textContent="No se pudo guardar.";}};
+$("#v-copy").onclick=()=>{const t=$("#v-copytxt").textContent;
+  navigator.clipboard.writeText(t).then(()=>{$("#v-copy").textContent="Copiado"},()=>{const r=document.createRange();r.selectNodeContents($("#v-copytxt"));const s=getSelection();s.removeAllRanges();s.addRange(r);$("#v-copy").textContent="Seleccionado, copiá con Ctrl+C";});};
+
+render();
+(async()=>{
+  db=await window.claude?.use?.("db").catch(()=>null) ?? null;
+  if(!db){$("#sync").textContent="Sin conexión";$("#offline").hidden=false;render();return;}
+  $("#sync").textContent="Sincronizado en vivo";
+  const err=e=>{$("#sync").textContent="Se cortó la sincronización: recargá la página";};
+  db.collection("insumos").onSnapshot(s=>{insumos=s.docs.map(d=>({id:d.id,...d.data()}));render();},err);
+  db.collection("movimientos").onSnapshot(s=>{movs=s.docs.map(d=>({id:d.id,...d.data()}));render();},err);
+  db.doc("config/vitrina").onSnapshot(s=>{vitrina=s.exists?s.data():{mensaje:""};render();},err);
+})();
+</script>
+
+</body></html>
